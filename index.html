@@ -1,30 +1,266 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--    <link rel="stylesheet" href="css/main.css">-->
 </head>
 
 <body>
-    <h3><b>How to make your own website</b></h3>
-    <h3>Monil Patel</h3>
+    <div id="banner">
+        <h1><b>How to make your own website</b></h1>
+        <h3>Monil Patel</h3>
+    </div>
+
 
     <div id="intro">
-        <p>In today's society learning how to make a website is a valuable skill. For computer science majors it is a great place to showcase projects, experiences and other information about yourselves that you want the world to see. Almost every technology compnay will expect students to have some web development background, however the curriculum here at the Virginia Tech doesn't expose students to it. Web development is a great introduction to basic programming and is great for beginners to see a visual representation of the code they are writing. The following instructions will demonstrate how to build a basic personal website. </p>
+        <div class="center_content">
+
+            <p>In today's society learning how to make a website is a valuable skill. For computer science majors it is a great place to showcase projects, experiences and other information about yourselves that you want the world to see. Almost every technology company will expect students to have some web development background, however the curriculum here at the Virginia Tech doesn't expose students to it. Web development is a great introduction to basic programming and is great for beginners to see a visual representation of the code they are writing. The following instructions will demonstrate how to build a basic personal website.
+            </p>
+            <p>It is very easy to start building a website. All you need is some sort of text editor such as notepad++. I personally use adobe brackets but it is completely up to you. Technology companies love web development because it has a very rapid development cycle. Once you understand the basics it can be done within minutes. </p>
+        </div>
     </div>
-    <div id="tools">
-        <p>It is very easy to start building a website. All you need is some sort of text editor such as notepad++. I personally use adobe brackets but it is completely up to you. Technology companies love web development because it has a very rapid development cycle. Once you understand the basics it can be done within minutes. </p>
+    <div id="basics" class="content">
+        <div class="center_content">
+            <h2>Basics</h2>
+            <p>Web development is broken into three main parts, HTML, CSS, and JavaScript. HTML is considered the content of the page. It is the information that you want to share with the world. CSS is the styling of the page. With CSS you can change the colors, fonts, format, and layout. JavaScript adds the functionality to the page. JavaScript is used to program the behavior of the website. This aspect of web development is closer to typical types of programming. Because of the simple design of this website this tutorial will not cover JavaScript.
+            </p>
+             <h2 style="color:red;" class="content">WAIT: Before we continue lets make this site look better. <a href="indexBetter.html#ugly_link">Click Here</a></h2>
+        </div>
 
     </div>
-    <div id="basics">
-        <h4>Basics</h4>
-        <p>Web development is broken into three main parts, HTML, CSS, JavaScript. HTML is considered the content of the page. It is the information that you want to share with the world. CSS is the styling of the page. With CSS you can change the colors, fonts, format, layout. JavaScript adds the functionality to the page. JavaScript is used to program the behavior of the website. This aspect of web development is closer to typical types of programming. Because of the simple design of this website I will only touch on JavaScript briefly.
-<!--            <img id="code_type" src="css/html_css_javascript.png">-->
+
+    <div class="content" id="getting_started">
+        <div class="center_content">
+            <h2>Getting Started</h2>
+            <p>You will need to open a text editor and create two files. Save these in a folder for easy accessibility</p>
+            <ul>
+                <li>index.html</li>
+                <li>main.css</li>
+            </ul>
+            <p><b>index.html</b> is the main page of your website. The basic structure of a HTML file is shown below. It is constructed of tags, html, header and body. The head is where imports will be included. The body is where your content will go. </p>
+            <div class="code">
+                <p>&lt!DOCTYPE html&gt</p>
+                <p>&lthtml&gt</p>
+                <p class="indent">&lthead&gt</p>
+                <p class="indent-2x">&ltmeta name="viewport" content="width=device-width, initial-scale=1"&gt</p>
+                <p class="indent-2x">&ltlink rel="stylesheet" href="main.css"&gt</p>
+
+
+                <p class="indent-2x">&lttitle&gt Website Title &lt/title&gt</p>
+                <p class="indent">&lt/head&gt</p>
+                <p class="indent">&ltbody&gt</p>
+                <p class="indent-2x">&ltp&gtcontent of website&lt/p&gt</p>
+                <p class="indent">&lt/body&gt</p>
+                <p>&lt/html&gt</p>
+
+            </div>
+        </div>
+    </div>
+    <div id="imports" class="content">
+        <div class="center_content">
+            <h2>Imports</h2>
+            <p>Imports are used in order to link your main.css file created earlier to the index.html file. There are a ton of libraries online that make it easy to use different styles buttons and icons such as Font Awesome and Bootstrap. For now we will stick to our custom made CSS files in order to style our webpage. </p>
+            <p>CSS imports are placed within the header tags within index.html
+            </p>
+            <div class="code">
+                <p>&lthead&gt</p>
+                <p class="indent">&ltmeta name="viewport" content="width=device-width, initial-scale=1"&gt</p>
+                <p class="indent">&lttitle&gt Website Title &lt/title&gt</p>
+
+                <p class="indent">&ltlink rel="stylesheet" href="main.css"&gt</p>
+                <p>&lt/head&gt</p>
+
+            </div>
+            <p>JavaScript imports would be placed at the bottom of the body tags. But this won't be necessary for this tutorial</p>
+            <div class="code">
+                <p>&ltbody&gt</p>
+                <p class="indent">&ltp&gtbody of website&lt/p&gt</p>
+
+                <p class="indent">&ltscript src="javascriptFile.js&gt</p>
+                <p>&lt/body&gt</p>
+
+
+            </div>
+        </div>
+    </div>
+    <div id="html_info" class="content">
+        <div class="center_content">
+            <h2>HTML</h2>
+            <p>As mentioned earlier the body tag is where your content will go. </p>
+            <p> Now is a good place to discuss one of the most important parts of HTML : <b>DIVS</b></p>
+            <p><b>Divs</b> define a division or a section within HTML file. They group elements together and are the foundation of any website. For example this tutorial is made up of several divs. The image at the top was in a div, and each subsequent informative section so far has each been their own divs. Each snippet of code on this site are inside of another div.</p>
+            <div class="code">
+                <p>&lt!DOCTYPE html&gt</p>
+                <p>&lthtml&gt</p>
+                <p class="indent">&lthead&gt</p>
+                <p class="indent-2x">&ltmeta name="viewport" content="width=device-width, initial-scale=1"&gt</p>
+                <p class="indent-2x">&ltlink rel="stylesheet" href="css/main.css"&gt</p>
+
+
+                <p class="indent-2x">&lttitle&gt Website Title &lt/title&gt</p>
+                <p class="indent">&lt/head&gt</p>
+                <p class="indent">&ltbody&gt</p>
+                <p class="indent-2x">&ltdiv&gt</p>
+
+                <p class="indent-3x">&lth1&gt My Website Title&lt/h1&gt</p>
+                <p class="indent-3x">&ltp&gt Body of your website&lt/p&gt</p>
+                <p class="indent-2x">&lt/div&gt</p>
+                <p class="indent">&lt/body&gt</p>
+                <p>&lt/html&gt</p>
+
+            </div>
+            <p>For this tutorial we will split the site into the following 4 main divs. (divs can also be nested within other divs)</p>
+            <ul>
+                <li>Banner</li>
+                <li>About</li>
+                <li>Experience</li>
+                <li>Contact</li>
+            </ul>
+            <p>Now we will add an id attribute to each of the divs specified above.</p>
+            <div class="note">
+                <p><b>ids</b> : unique names used to identify an element for styling and for JavaScript. We will use the id in order to alternate the background colors like you see on this page. </p>
+                <p><b>classes</b>: an attribute shared by multiple elements in order to share properties (such as color, size, font). We will use classes in order to center the text in the middle of the page</p>
+
+            </div>
+            <p> The following tags are two ways to write content within these different divs. </p>
+            <p><b>H Tag</b> | The header tags are used to create bold titles for your website </p>
+            <div class="code">
+                <h1>&lth1&gtHeader&lt/h1&gt</h1>
+                <h2>&lth2&gtHeader&lt/h2&gt</h2>
+
+                <h3>&lth3&gtHeader&lt/h3&gt</h3>
+
+                <h4>&lth4&gtHeader&lt/h4&gt</h4>
+
+                <h5>&lth5&gtHeader&lt/h5&gt</h5>
+                <h6>&lth6&gtHeader&lt/h6&gt</h6>
+            </div>
+            <p><b>P Tag</b> | The paragraph tag is used to write larger amounts of text </p>
+            <div class="code">
+                <p>&ltp&gt</p>
+                <p class="indent">Loremipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>&lt/p&gt</p>
+            </div>
+            <p><b>Responsive Design</b> is the method of writing one type of html code that will be able to scale across any size device. One way to approach this is by having an outer and inner nested div. The outer div will have a width of the entire screen, while the inner div will change the margins and paddings to keep the text nicely centered to the middle of the screen</p>
+
+            <div class="code">
+                <p>&lt!DOCTYPE html&gt</p>
+                <p>&lthtml&gt</p>
+                <p class="indent">&lthead&gt</p>
+                <p class="indent-2x">&ltmeta name="viewport" content="width=device-width, initial-scale=1"&gt</p>
+                <p class="indent-2x">&ltlink rel="stylesheet" href="css/main.css"&gt</p>
+
+
+                <p class="indent-2x">&lttitle&gt Website Title &lt/title&gt</p>
+                <p class="indent">&lt/head&gt</p>
+                <p class="indent">&ltbody&gt</p>
+                <p class="indent-2x">&ltdiv id="banner"&gt</p>
+                <p class="indent-3x">&ltdiv class="center"&gt</p>
+                <p class="indent-4x">&lth1&gt Write your name! &lt/h1&gt</p>
+
+                <p class="indent-3x">&lt/div&gt</p>
+                <p class="indent-2x">&lt/div&gt</p>
+                <p class="indent-2x">&ltdiv id="about"&gt</p>
+                <p class="indent-3x">&ltdiv class="center"&gt</p>
+                <p class="indent-4x">&lth2&gt About &lt/h2&gt</p>
+                <p class="indent-4x">&ltp&gt Write your name! &lt/p&gt</p>
+
+
+                <p class="indent-3x">&lt/div&gt</p>
+                <p class="indent-2x">&lt/div&gt</p>
+                <p class="indent-2x">&ltdiv id="experience"&gt</p>
+                <p class="indent-3x">&ltdiv class="center"&gt</p>
+                <p class="indent-4x">&lth2&gt Experience &lt/h2&gt</p>
+                <p class="indent-4x">&ltp&gt Write a little about your experience&lt/p&gt</p>
+
+                <p class="indent-3x">&lt/div&gt</p>
+                <p class="indent-2x">&lt/div&gt</p>
+                <p class="indent-2x">&ltdiv id="contact"&gt</p>
+                <p class="indent-3x">&ltdiv class="center"&gt</p>
+                <p class="indent-4x">&lth2&gt Contact &lt/h2&gt</p>
+                <p class="indent-4x">&ltp&gt Link to resume and email address &lt/p&gt</p>
+
+                <p class="indent-3x">&lt/div&gt</p>
+                <p class="indent-2x">&lt/div&gt</p>
+
+                <p class="indent">&lt/body&gt</p>
+                <p>&lt/html&gt</p>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="center_content">
+        <h2>CSS</h2>
+        <p><b>Now for the fun part!</b></p>
+        <p>CSS is the time to be creative. You can use css to make your basic structure have a unique look that reflects your personality. </p>
+        <p>Using those ids and classes that we defined earlier we can apply styles to the code we have written so far. </p>
+        <ul>
+            <li># is used to manipulate a id</li>
+            <li>. is used to manipulate a class</li>
+        </ul>
+        <div class="codecss">
+            <p class="comments">// Specify a specific font to use for the entire site. Padding is how much negative space is inside the specific div. Margin is how much negative space is around the specific div</p>
+
+            html, body {
+            <br> font-family: 'Roboto', sans-serif;
+            <br> margin: 0;
+            <br> padding: 0;
+            <br> height: 100%;
+            <br> color: #1d496e;
+            <br> }
+            <br>
+
+            <br>
+            <p class="comments">// save an image to your folder created in the beginning the background - options are used to ensure that the image fills up the space on smaller and larger screens </p>
+
+            #banner {
+            <br> color: white;
+            <br> font-size: 2em;
+            <br> padding: 15%;
+            <br> line-height: 200%;
+            <br> background-color: #378cd2;
+            <br> background-image: url(banner.JPG);
+            <br> background-repeat: no-repeat;
+            <br> background-position: center center;
+            <br> background-size: cover;
+            <br> }
+            <br>
+
+            <p class="comments"> // this class is used to center the text within each section on the page </p>
+            .center {
+            <br> padding: 3em 2em;
+            <br> max-width: 70em;
+            <br> background: white;
+            <br> line-height: 200%;
+            <br> margin: 0px auto;
+            <br> background: none;
+            <br> }
+            <br>
+
+            <p class="comments"> // You can chain ids in order to use the same styling for multiple elements without creating a class </p>
+            #about, #contact {
+            <br> background: #f7f9fc;
+            <br> }
+            <br>
+
+        </div>
+
+    </div>
+    <div id="finish">
+        <div class="center_content">
+                 <h3>And thats it, your website is complete!</h3>
+        <p>Using these basic ideas you can make a personal website in no time. After learning thee basics you can start to look more advanced ways to create a websites. With JavaScript and jQuery you can add animations but a great next step would be to look into CSS hover effects. These simple CSS attributes allow you to change the color of elements as the user clicks on different parts. The final step of making a website is to host it onlin. In order to getstandard domain you will have to pay money, but a free option that I use all the time is through GitHub Pages. 
+        <a href="https://www.thinkful.com/learn/a-guide-to-using-github-pages"/>Here is a link to a great tutorial about how to upload and use GitHub Pages </a>
         </p>
+        </div>
     </div>
     
-    <h2 style="color:red;" class="content">WAIT: Before we continue lets make this site look better. <a href="indexBetter.html#ugly_link">Click Here</a></h2>
-    <div id="imports">
-        <p>Imports are used to link CSS and Javascript into your HTML. </p>
-    </div>
+  
 
 </body>
 
